@@ -38,6 +38,7 @@ nav .loginSignup button {
   border: var(--myBorder);
   border-radius: var(--myBorderRadius);
   cursor: pointer;
+  font-size: .6em;
 }
 
 nav .loginSignup button i {
@@ -75,7 +76,7 @@ nav .navIcons i:hover {
 .hero p {
   color: white;
   position: absolute;
-  right: 20%;
+  right: 10%;
   top: 40%;
 }
 
@@ -144,6 +145,7 @@ nav .navIcons i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .products article .center .centerImg {
