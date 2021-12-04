@@ -78,6 +78,14 @@ nav .navIcons i:hover {
   top: 40%;
 }
 
+.products {
+  padding: 1rem;
+}
+
+.products .topCards {
+  margin-top: 1rem;
+}
+
 .products .topCards,
 .products .bottomCards {
   display: -webkit-box;
@@ -93,7 +101,6 @@ nav .navIcons i:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: cadetblue;
 }
 
 .products .topCards .card,
@@ -112,8 +119,9 @@ nav .navIcons i:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-shadow: var(--myBoxShadow);
+          box-shadow: var(--myBoxShadow);
   width: 100%;
-  padding: .5rem;
 }
 
 .products .topCards .card .top,
@@ -132,7 +140,6 @@ nav .navIcons i:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
   margin-bottom: 10px;
 }
 
@@ -164,8 +171,8 @@ nav .navIcons i:hover {
 
 .products .topCards .card .top img,
 .products .bottomCards .card .top img {
-  width: 10rem;
-  height: 12rem;
+  width: 100%;
+  height: 10rem;
   margin-top: 10px;
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
@@ -189,6 +196,7 @@ nav .navIcons i:hover {
           justify-content: center;
   gap: 3px;
   margin-bottom: 1rem;
+  font-size: .1em;
 }
 
 .products .topCards .card .bottom,
@@ -214,6 +222,7 @@ nav .navIcons i:hover {
 .products .topCards .card .bottom .productIcons,
 .products .bottomCards .card .bottom .productIcons {
   color: white;
+  position: relative;
 }
 
 .products .topCards .card .bottom .productIcons i,
@@ -221,6 +230,22 @@ nav .navIcons i:hover {
   background-color: green;
   padding: .4rem;
   border-radius: 40%;
+  cursor: pointer;
+}
+
+.products .topCards .card .bottom .productIcons i:nth-child(2),
+.products .bottomCards .card .bottom .productIcons i:nth-child(2) {
+  background-color: darkred;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.products .topCards .card .bottom .productIcons:hover i.fa-heart,
+.products .bottomCards .card .bottom .productIcons:hover i.fa-heart {
+  left: 30px;
 }
 
 .products .topCards .card .bottom .productPrice,
@@ -262,11 +287,6 @@ nav .navIcons i:hover {
     display: flex;
     width: 100%;
   }
-  main .products .topCards .card,
-  main .products .bottomCards .card {
-    background-color: darkolivegreen;
-    margin: 2rem;
-  }
   main .products .topCards .card .top,
   main .products .bottomCards .card .top {
     -webkit-box-orient: horizontal;
@@ -295,6 +315,32 @@ nav .navIcons i:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  main .products .topCards,
+  main .products .bottomCards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .products .bottomCards {
+    margin-top: 1.5rem;
+  }
+  main .topFirstProducts,
+  main .topSecondProducts,
+  main .bottomFirstCards,
+  main .bottomSecondProducts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+  }
+  main .products .top .productImg img {
+    width: 20px;
+    height: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -71,6 +71,11 @@ nav {
 }
 
 .products {
+    padding: 1rem;
+
+    .topCards {
+        margin-top: 1rem;
+    }
 
     .topCards,
     .bottomCards {
@@ -78,27 +83,22 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: cadetblue;
 
-        .card{
+        .card {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            // width: 30vw;
+            box-shadow: var(--myBoxShadow);
             width: 100%;
-            padding: .5rem;
-            // background-color: brown;
 
             .top {
                 width: 100%;
                 display: flex;
-                // flex-direction: row-reverse;
                 flex-direction: column-reverse;
                 justify-content: space-between;
                 align-items: center;
-                gap: 10px;
                 margin-bottom: 10px;
 
                 .stars {
@@ -120,20 +120,21 @@ nav {
                 }
 
                 img {
-                    width: 10rem;
-                    height: 12rem;
+                    width: 100%;
+                    height: 10rem;
                     margin-top: 10px;
                     order: 5;
                 }
             }
 
-            .center .centerImgName{
+            .center .centerImgName {
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
                 justify-content: center;
                 gap: 3px;
                 margin-bottom: 1rem;
+                font-size: .1em;
             }
 
             .bottom {
@@ -147,13 +148,32 @@ nav {
 
                 .productIcons {
                     color: white;
+                    position: relative;
 
                     i {
                         background-color: green;
                         padding: .4rem;
                         border-radius: 40%;
+                        cursor: pointer;
                     }
                 }
+
+                .productIcons i:nth-child(2) {
+                    background-color: darkred;
+                    position: absolute;
+                    left: 0;
+                    z-index: -1;
+                    transition: all 1s linear;
+                }
+
+                .productIcons:hover i.fa-heart {
+                    left: 30px;
+                }
+
+                // i.fa-heart{
+                //     background-color: darksalmon;
+                // }
+
 
                 .productPrice {
                     display: flex;
@@ -167,12 +187,12 @@ nav {
 }
 
 @media (min-width: 600px) {
-    body{
+    body {
         // background-color: rgb(255, 0, 242);
     }
 
     main .products .topCards,
-    main .products .bottomCards{
+    main .products .bottomCards {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -180,33 +200,59 @@ nav {
         .topFirstProducts,
         .topSecondProducts,
         .bottomFirstCards,
-        .bottomSecondProducts{
+        .bottomSecondProducts {
             display: flex;
             width: 100%;
             // gap: 2rem;
         }
 
-        .card{
-            background-color: darkolivegreen;
-            margin: 2rem;
-            
-            .top{
+        .card {
+            // background-color: darkolivegreen;
+            // margin: 2rem;
+
+            .top {
                 flex-direction: row;
                 align-items: flex-start;
 
-                .productImg{
+                .productImg {
                     order: 3;
                 }
 
-                .offer{
+                .offer {
                     order: 4;
                 }
             }
 
-            .bottom{
+            .bottom {
                 flex-direction: row;
             }
         }
     }
 
+}
+
+@media (min-width: 992px) {
+
+    main .products .topCards,
+    main .products .bottomCards {
+        flex-direction: row;
+    }
+
+    main .products .bottomCards{
+        margin-top: 1.5rem;
+    }
+
+    main .topFirstProducts,
+    main .topSecondProducts,
+    main .bottomFirstCards,
+    main .bottomSecondProducts
+    {
+        display: flex;
+        gap: 40px;
+    }
+
+    main .products .top .productImg img {
+        width: 20px;
+        height: 20px;
+    }
 }
