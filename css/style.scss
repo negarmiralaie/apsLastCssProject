@@ -153,22 +153,51 @@ nav {
                     i {
                         background-color: green;
                         padding: .4rem;
-                        border-radius: 40%;
+                        border-radius: 40px;
                         cursor: pointer;
+                        transition: all 0.25s ease-out;
+
+                        span {
+                            margin-left: 15px;
+                            display: none;
+                            transition: all 0.25s ease-out;
+                        }
                     }
                 }
 
-                .productIcons i:nth-child(2) {
-                    background-color: darkred;
-                    position: absolute;
-                    left: 0;
-                    z-index: -1;
-                    transition: all 1s linear;
+                @-webkit-keyframes fadeIn {
+                    from {
+                        opacity: 0.9;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
                 }
 
-                .productIcons:hover i.fa-heart {
-                    left: 30px;
+                .productIcons i:hover span {
+                    display: inline;
+                   -webkit-animation: fadeIn 1s;
+                    animation: fadeIn 1s;
+                    transition: all 0.25s ease-out;
                 }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                // i:hover span{
+                //     left: 20px;
+                //     //display: inline;
+                //     background-color: green;
+                //     transition: all .3s linear;
+                // }
 
                 // i.fa-heart{
                 //     background-color: darksalmon;
@@ -238,15 +267,14 @@ nav {
         flex-direction: row;
     }
 
-    main .products .bottomCards{
+    main .products .bottomCards {
         margin-top: 1.5rem;
     }
 
     main .topFirstProducts,
     main .topSecondProducts,
     main .bottomFirstCards,
-    main .bottomSecondProducts
-    {
+    main .bottomSecondProducts {
         display: flex;
         gap: 40px;
     }
