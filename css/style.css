@@ -34,9 +34,10 @@ nav {
 }
 
 nav .loginSignup button {
-  padding: .5rem .7rem;
+  padding: .3rem .7rem;
   border: var(--myBorder);
   border-radius: var(--myBorderRadius);
+  cursor: pointer;
 }
 
 nav .loginSignup button i {
