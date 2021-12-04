@@ -1,1 +1,65 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+:root {
+  --myBoxShadow: 0 .5rem 1rem rgba(0, 0, 0, .05);
+  --myBorder: .1rem solid black;
+  --myBorderRadius: 5px;
+  --myOutline: .1rem solid rgba(0, 0, 0, .1);
+  --myOutlineHover: .2rem solid var(--myBlack);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  -webkit-box-shadow: var(--myBoxShadow);
+          box-shadow: var(--myBoxShadow);
+}
+
+nav .loginSignup button {
+  padding: .5rem .7rem;
+  border: var(--myBorder);
+  border-radius: var(--myBorderRadius);
+}
+
+nav .loginSignup button i {
+  margin-left: .7rem;
+}
+
+nav .navIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 15%;
+}
+
+nav .navIcons i {
+  cursor: pointer;
+}
+
+nav .navIcons i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

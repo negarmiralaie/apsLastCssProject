@@ -1,0 +1,54 @@
+:root {
+    --myBoxShadow: 0 .5rem 1rem rgba(0, 0, 0, .05);
+    --myBorder: .1rem solid black;
+    --myBorderRadius : 5px;
+    --myOutline: .1rem solid rgba(0, 0, 0, .1);
+    --myOutlineHover: .2rem solid var(--myBlack);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    box-shadow: var(--myBoxShadow);
+
+    .loginSignup {
+
+        button {
+            padding: .5rem .7rem;
+            border: var(--myBorder);
+            border-radius: var(--myBorderRadius);
+
+            i {
+                margin-left: .7rem;
+            }
+        }
+
+    }
+
+    .navIcons {
+        display: flex;
+        justify-content: space-between;
+        min-width: 15%;
+
+        i {
+            cursor: pointer;
+        }
+
+        i:hover {
+            transform: scale(1.1);
+            color: red;
+        }
+    }
+}
