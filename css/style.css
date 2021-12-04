@@ -62,4 +62,19 @@ nav .navIcons i:hover {
           transform: scale(1.1);
   color: red;
 }
+
+.hero {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbXnOXMZ9KN4fuIuE2BujEItzKo_8DckzdsjoSWWxJxl3cMjbGmCHfjiy79LEZ3eLlV4k&usqp=CAU") no-repeat;
+  background-position: 50% 80%;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+}
+
+.hero p {
+  color: white;
+  position: absolute;
+  right: 10%;
+  top: 40%;
+}
 /*# sourceMappingURL=style.css.map */
