@@ -87,9 +87,9 @@ nav {
             align-items: center;
             text-align: center;
             // width: 30vw;
-            width: 90%;
+            width: 100%;
             padding: .5rem;
-            background-color: brown;
+            // background-color: brown;
 
             .top {
                 width: 100%;
@@ -162,9 +162,51 @@ nav {
                     font-size: .7em;
                 }
             }
-
         }
     }
+}
 
+@media (min-width: 600px) {
+    body{
+        // background-color: rgb(255, 0, 242);
+    }
+
+    main .products .topCards,
+    main .products .bottomCards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .topFirstProducts,
+        .topSecondProducts,
+        .bottomFirstCards,
+        .bottomSecondProducts{
+            display: flex;
+            width: 100%;
+            // gap: 2rem;
+        }
+
+        .card{
+            background-color: darkolivegreen;
+            margin: 2rem;
+            
+            .top{
+                flex-direction: row;
+                align-items: flex-start;
+
+                .productImg{
+                    order: 3;
+                }
+
+                .offer{
+                    order: 4;
+                }
+            }
+
+            .bottom{
+                flex-direction: row;
+            }
+        }
+    }
 
 }

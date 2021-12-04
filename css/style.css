@@ -112,9 +112,8 @@ nav .navIcons i:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 90%;
+  width: 100%;
   padding: .5rem;
-  background-color: brown;
 }
 
 .products .topCards .card .top,
@@ -236,5 +235,66 @@ nav .navIcons i:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: .7em;
+}
+
+@media (min-width: 600px) {
+  main .products .topCards,
+  main .products .bottomCards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  main .products .topCards .topFirstProducts,
+  main .products .topCards .topSecondProducts,
+  main .products .topCards .bottomFirstCards,
+  main .products .topCards .bottomSecondProducts,
+  main .products .bottomCards .topFirstProducts,
+  main .products .bottomCards .topSecondProducts,
+  main .products .bottomCards .bottomFirstCards,
+  main .products .bottomCards .bottomSecondProducts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  main .products .topCards .card,
+  main .products .bottomCards .card {
+    background-color: darkolivegreen;
+    margin: 2rem;
+  }
+  main .products .topCards .card .top,
+  main .products .bottomCards .card .top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main .products .topCards .card .top .productImg,
+  main .products .bottomCards .card .top .productImg {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  main .products .topCards .card .top .offer,
+  main .products .bottomCards .card .top .offer {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  main .products .topCards .card .bottom,
+  main .products .bottomCards .card .bottom {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=style.css.map */
