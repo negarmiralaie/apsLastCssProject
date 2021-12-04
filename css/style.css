@@ -14,8 +14,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
 }
 
 nav {
@@ -80,7 +78,26 @@ nav .navIcons i:hover {
   top: 40%;
 }
 
-.products article {
+.products .topCards,
+.products .bottomCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: cadetblue;
+}
+
+.products .topCards .card,
+.products .bottomCards .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,33 +112,45 @@ nav .navIcons i:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 30vw;
+  width: 90%;
   padding: .5rem;
+  background-color: brown;
 }
 
-.products article .top {
+.products .topCards .card .top,
+.products .bottomCards .card .top {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.products article .top .stars {
+.products .topCards .card .top .stars,
+.products .bottomCards .card .top .stars {
   color: #f1aa24;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
-.products article .top .offer {
+.products .topCards .card .top .offer,
+.products .bottomCards .card .top .offer {
   background-color: red;
   border-radius: 2px;
   width: 50px;
@@ -129,15 +158,23 @@ nav .navIcons i:hover {
   padding: .1rem;
   font-size: .5em;
   color: white;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
-.products article .top img {
+.products .topCards .card .top img,
+.products .bottomCards .card .top img {
   width: 10rem;
   height: 12rem;
   margin-top: 10px;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 
-.products article .center {
+.products .topCards .card .center,
+.products .bottomCards .card .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,38 +185,52 @@ nav .navIcons i:hover {
   margin-bottom: 1rem;
 }
 
-.products article .center .centerImg {
+.products .topCards .card .center .centerImg,
+.products .bottomCards .card .center .centerImg {
   width: 8rem;
   height: 10rem;
 }
 
-.products article .center .centerImg img {
+.products .topCards .card .center .centerImg img,
+.products .bottomCards .card .center .centerImg img {
   width: 100%;
   height: 100%;
 }
 
-.products article .bottom {
+.products .topCards .card .bottom,
+.products .bottomCards .card .bottom {
   width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 
-.products article .bottom .productIcons {
+.products .topCards .card .bottom .productIcons,
+.products .bottomCards .card .bottom .productIcons {
   color: white;
 }
 
-.products article .bottom .productIcons i {
+.products .topCards .card .bottom .productIcons i,
+.products .bottomCards .card .bottom .productIcons i {
   background-color: green;
   padding: .4rem;
   border-radius: 40%;
 }
 
-.products article .bottom .productPrice {
+.products .topCards .card .bottom .productPrice,
+.products .bottomCards .card .bottom .productPrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,6 +238,8 @@ nav .navIcons i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: .7em;
 }
 /*# sourceMappingURL=style.css.map */
