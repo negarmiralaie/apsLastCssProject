@@ -13,7 +13,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    // transition: all .2s linear;
 }
 
 nav {
@@ -36,7 +35,6 @@ nav {
                 margin-left: .7rem;
             }
         }
-
     }
 
     .navIcons {
@@ -81,7 +79,7 @@ nav {
     .bottomCards {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         .card {
@@ -192,18 +190,6 @@ nav {
                     }
                 }
 
-                // i:hover span{
-                //     left: 20px;
-                //     //display: inline;
-                //     background-color: green;
-                //     transition: all .3s linear;
-                // }
-
-                // i.fa-heart{
-                //     background-color: darksalmon;
-                // }
-
-
                 .productPrice {
                     display: flex;
                     flex-direction: row;
@@ -215,10 +201,31 @@ nav {
     }
 }
 
-@media (min-width: 600px) {
-    body {
-        // background-color: rgb(255, 0, 242);
+footer{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+    background-color: gray;
+    color: white;
+
+    .aboutUs{
+        width: 70%;
+        padding: 2rem;
     }
+
+    .media{
+        width: 30%;
+        padding: 2rem;
+
+        .mediaIcons{
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (min-width: 600px) {
 
     main .products .topCards,
     main .products .bottomCards {
@@ -235,9 +242,12 @@ nav {
             // gap: 2rem;
         }
 
+        .topFirstProducts,
+        .bottomFirstCards{
+            margin-right: 1rem;
+        }
+
         .card {
-            // background-color: darkolivegreen;
-            // margin: 2rem;
 
             .top {
                 flex-direction: row;
