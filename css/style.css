@@ -95,9 +95,6 @@ nav .navIcons i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -122,6 +119,7 @@ nav .navIcons i:hover {
   -webkit-box-shadow: var(--myBoxShadow);
           box-shadow: var(--myBoxShadow);
   width: 100%;
+  min-height: 40px;
 }
 
 .products .topCards .card .top,
@@ -341,11 +339,9 @@ footer .media .mediaIcons {
     display: flex;
     width: 100%;
   }
-  main .products .topCards .topFirstProducts,
-  main .products .topCards .bottomFirstCards,
-  main .products .bottomCards .topFirstProducts,
-  main .products .bottomCards .bottomFirstCards {
-    margin-right: 1rem;
+  main .products .topCards .card,
+  main .products .bottomCards .card {
+    margin: 0 1rem;
   }
   main .products .topCards .card .top,
   main .products .bottomCards .card .top {
@@ -396,7 +392,6 @@ footer .media .mediaIcons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 40px;
   }
   main .products .top .productImg img {
     width: 20px;

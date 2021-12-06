@@ -79,7 +79,6 @@ nav {
     .bottomCards {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
 
         .card {
@@ -90,6 +89,7 @@ nav {
             text-align: center;
             box-shadow: var(--myBoxShadow);
             width: 100%;
+            min-height: 40px;
 
             .top {
                 width: 100%;
@@ -239,15 +239,10 @@ footer{
         .bottomSecondProducts {
             display: flex;
             width: 100%;
-            // gap: 2rem;
-        }
-
-        .topFirstProducts,
-        .bottomFirstCards{
-            margin-right: 1rem;
         }
 
         .card {
+            margin: 0 1rem;
 
             .top {
                 flex-direction: row;
@@ -286,7 +281,6 @@ footer{
     main .bottomFirstCards,
     main .bottomSecondProducts {
         display: flex;
-        gap: 40px;
     }
 
     main .products .top .productImg img {
